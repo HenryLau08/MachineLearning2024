@@ -42,7 +42,7 @@ def main():
     audio_file = st.selectbox("Select an audio file:", df["Unnamed: 0"].unique())
 
     st.subheader(f"Playing Selected Audio: {audio_file}")
-    selected_audio_path = f"./labeled/{audio_file}"
+    selected_audio_path = f"Portfolio_3/labeled/{audio_file}"
     st.audio(selected_audio_path)
 
     if st.button("Get Recommendations"):
@@ -54,7 +54,7 @@ def main():
                 f"{i+1}. {row['Unnamed: 0']} (Genre: {row['genre']}, Similarity: {row['similarity_score']:.2f})"
             )
 
-            audio_path = f"./labeled/{row['Unnamed: 0']}"
+            audio_path = f"Portfolio_3/labeled/{row['Unnamed: 0']}"
             st.audio(audio_path)
 
 
